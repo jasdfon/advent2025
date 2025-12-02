@@ -6,11 +6,6 @@ let silver = 0;
 let gold = 0;
 
 const filename = process.argv[2];
-if (!filename) {
-  console.error(`usage: node ${process.argv[1]} <file>`);
-  process.exit(1);
-}
-
 const rl = readline.createInterface({
   input: fs.createReadStream(filename)
 });

@@ -3,10 +3,6 @@
 #include <string.h>
 
 int main(int argc, char *argv[]) {
-    if (argc < 2) {
-        printf("usage: %s <filename>\n", argv[0]);
-        return 1;
-    }
     int position = 50;
     int silver = 0;
     int gold = 0;
