@@ -1,3 +1,4 @@
-*input.txt
+*.txt
+!edgecases.txt
 package-lock.json
 node_modules/

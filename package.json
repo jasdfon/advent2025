@@ -2,9 +2,7 @@
   "name": "advent",
   "version": "0.2025.01",
   "description": "",
-  "scripts": {
-    "day": "node ./${YEAR:-2025}/day${DAY:-01}/part1.js && node ./${YEAR:-2025}/day${DAY:-01}/part2.js"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jasdfon/advent.git"
@@ -14,5 +12,6 @@
   "bugs": {
     "url": "https://github.com/jasdfon/advent/issues"
   },
-  "homepage": "https://github.com/jasdfon/advent#readme"
+  "homepage": "https://github.com/jasdfon/advent#readme",
+  "dependencies": {}
 }
