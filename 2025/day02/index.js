@@ -27,7 +27,6 @@ const nextId = (a, n) => {
             const newfirstVal = firstVal+1;
             return expandN(newfirstVal, n, newPartLen);
         }
-        return expandN(firstVal+1, n, partLen);
     }
     const firstMiss = parts.find((val) => Number(val) !== firstVal);
     if(firstMiss < parts[0]){
