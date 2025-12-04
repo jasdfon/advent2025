@@ -124,7 +124,7 @@ int main(int argc, char *argv[]){
     char onA = 1;
     long silver = 0;
     long gold = 0;        
-    long resArray[1024];
+    long resArray[4096];
     int resLen = 0;
     while((c = fgetc(fp)) != EOF){
         if(c == '-'){
