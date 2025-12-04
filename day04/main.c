@@ -25,9 +25,9 @@ void updateAround(char heatMap[][GRID_MAX], int x, int y, int updateVal){
 }
 
  int removeAccesiblePaper(char heatMap[][GRID_MAX], char nextMap[][GRID_MAX],  int paperLocations[][2],  int paperCount){
-     int count = 0;
-     int x;
-     int y;
+    int count = 0;
+    int x;
+    int y;
     for( int i = 0; i < paperCount; i++){
         x = paperLocations[i][0];
         y = paperLocations[i][1];
@@ -46,13 +46,11 @@ int main(int argc, char *argv[]){
     if (!fp) return 1;
     char c;
     char currentMap[GRID_MAX][GRID_MAX] = {0};
-     int paperLocations[GRID_MAX * GRID_MAX][2] = {0};
-     int paperCount = 0;
-    
-     long gold = 0;
-     long silver = 0;
-     int x = 0;
-     int y = 0;
+    int paperLocations[GRID_MAX * GRID_MAX][2] = {0};
+    int paperCount = 0;
+
+    long gold = 0; long silver = 0;
+    int x = 0; int y = 0;
     while((c = fgetc(fp)) != EOF){
         if(c == '\n'){
             x = 0;
@@ -69,7 +67,6 @@ int main(int argc, char *argv[]){
     };
     char nextMap[GRID_MAX][GRID_MAX];
     copyMap(currentMap, nextMap);
-
     int removedPaper = removeAccesiblePaper(currentMap, nextMap, paperLocations, paperCount);
     silver = removedPaper;
     while(removedPaper > 0){
@@ -81,6 +78,5 @@ int main(int argc, char *argv[]){
     fclose(fp);
     printf("silver %ld\n", silver);
     printf("gold %ld\n", gold);
- 
     return 0;
 }
