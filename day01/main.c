@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char *argv[]){
     int position = 50;
     long silver = 0;
     long gold = 0;
@@ -12,9 +12,9 @@ int main(int argc, char *argv[]) {
 
     char line[64];
 
-    while (fgets(line, sizeof(line), fp)) {
+    while(fgets(line, sizeof(line), fp)){
         int len = strlen(line);
-        if (line[len-1] == '\n'){ 
+        if(line[len-1] == '\n'){ 
             line[len-1] = '\0';
             len--;
         }
@@ -31,26 +31,26 @@ int main(int argc, char *argv[]) {
         int initialPos = position;
         gold += fullRotationCount;
 
-        if (negative) {
+        if(negative){
             position -= positionMove;
-            if (position < 0) {
+            if(position < 0){
                 position += 100;
                 gold += 1;
             }
-            if (position == 0) {
+            if(position == 0){
                 gold += 1;
             }
-            if (initialPos == 0) {
+            if(initialPos == 0){
                 gold -= 1;
             }
-        } else {
+        }else{
             position += positionMove;
-            if (position > 99) {
+            if(position > 99){
                 position -= 100;
                 gold += 1;
             }
         }
-        if (position == 0 && (fullRotationCount > 0 || positionMove > 0)) {
+        if(position == 0 && (fullRotationCount > 0 || positionMove > 0)){
             silver += 1;
         }
     }
