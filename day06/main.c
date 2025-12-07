@@ -49,9 +49,11 @@ int main(int argc, char *argv[]) {
     if (!fp) return 1;
     char c; int charCount = 0;
     char current[16];
-    int gridX = 0; int gridY = 0;
+    int gridX = 0; 
+    int gridY = 0;
     int grid[AOC_GRID_SIZE][AOC_GRID_SIZE];
-    int cephaX = 0; int cephaLen = 0;
+    int cephaX = 0; 
+    int cephaLen = 0;
     int cepha[AOC_GRID_SIZE*8];
     char readingOps = 0;
     while((c = fgetc(fp)) != EOF){
