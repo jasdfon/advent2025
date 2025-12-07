@@ -102,6 +102,7 @@ int main(int argc, char *argv[]){
             characters++;
         }
     };
+    fclose(fp);
 
     mergeRanges(ranges, rangesCount);
     long silver = unspoiledCount(spoiled, spoiledCount, ranges, rangesCount);
@@ -109,6 +110,5 @@ int main(int argc, char *argv[]){
 
     printf("silver %ld\n", silver);
     printf("gold %ld\n", gold);
-    fclose(fp);
     return 0;
 }

@@ -150,8 +150,8 @@ int main(int argc, char *argv[]){
             };
         }
     };
+    fclose(fp);
     printf("silver %ld\n", silver);
     printf("gold %ld\n", gold);
-    fclose(fp);
     return 0;
 }

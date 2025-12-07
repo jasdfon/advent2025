@@ -58,9 +58,9 @@ int main(int argc, char *argv[]){
             updateBattery(silverBat, SILVER_BATTERY_SIZE, c);
         }
     };
+    fclose(fp);
 
     printf("silver %ld\n", silver);
     printf("gold %ld\n", gold);
-    fclose(fp);
     return 0;
 }

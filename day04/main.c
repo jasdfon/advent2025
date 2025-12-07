@@ -65,6 +65,7 @@ int main(int argc, char *argv[]){
             x++;
         }
     };
+    fclose(fp);
     char nextMap[GRID_MAX][GRID_MAX];
     copyMap(currentMap, nextMap);
     int removedPaper = removeAccesiblePaper(currentMap, nextMap, paperLocations, paperCount);
@@ -75,7 +76,6 @@ int main(int argc, char *argv[]){
         removedPaper = removeAccesiblePaper(currentMap, nextMap, paperLocations, paperCount);
     }
 
-    fclose(fp);
     printf("silver %ld\n", silver);
     printf("gold %ld\n", gold);
     return 0;
